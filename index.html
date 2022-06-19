@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>compteur de lettres</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onKeyPress="if (event.keyCode == 13) displayNumber()" onkeydown="if (event.keyCode == 32) return false;"
+>
+  <h1>Le compteur de lettres</h1>
+
+  <form onsubmit="return false">
+    <fieldset>
+      <legend>écris un mot </legend>
+      <input type="text" id="sentence" placeholder="et je te dirais combien de lettres il comporte..." maxlength="50" onkeypress="pressEnter(event) " spellcheck="false" autocomplete="off">
+    </fieldset>
+    <button id="myBtn" type="button" onclick="displayNumber();" accesskey="r">
+      on compte ?
+    </button>
+  </form>
+  <p id="nbLetter"></p><br/>
+
+
+  <script src="script.js"></script>
+</body>
+ 
+</html>
